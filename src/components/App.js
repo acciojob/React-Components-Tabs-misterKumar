@@ -1,12 +1,11 @@
-import React from 'react';
-import Tabs from './Tabs';
+import React from 'react'
+import ReactDom from 'react-dom'
+import Allroutes from './Allroutes'
 
-function App() {
-  return (
-    <div className="App">
-      <Tabs />
+const App=()=>{
+    return <div className='App'>
+        <Allroutes/>
     </div>
-  );
 }
 
-export default App;
+export default App
