@@ -1,17 +1,39 @@
-import React from "react";
-import Tabs from "./Tabs";
+import React, { useState } from 'react';
+import '../styles/App.css';
 
-const App=()=>{
-    return(
-        <div>
-            <div className="viewport">Pages Go Here</div>
-            <div className="tabs">
-                <div className="tab" id="Home-Tab">Home</div>
-                <div className="tab" id="About-Tab">About</div>
-                <div className="tab" id="Features-Tab">Features</div>
-            </div>
-        </div>
-    )
-}
 
-export default App
+
+const TABS = [
+  { id: 'Home', label: 'Home' },
+  { id: 'About', label: 'About' },
+  { id: 'Features', label: 'Features' },
+];
+
+const App = () => {
+  const [activeTab, setActiveTab] = useState(TABS[0].id);
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+  };
+
+  return (
+    <div className="App">
+      <div className="tabs">
+        {TABS.map((tab) => (
+          <div
+            key={tab.id}
+            className={`tab ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => handleTabClick(tab.id)}
+          >
+            {tab.label}
+          </div>
+        ))}
+      </div>
+      <div className="viewport">
+        Pages Go Here
+      </div>
+    </div>
+  );
+};
+
+export default App;
