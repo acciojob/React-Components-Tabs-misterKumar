@@ -1,16 +1,19 @@
-
 import React from 'react';
-import ReactDOM from "react-dom";
-import TabComponent from './TabComponent';
+import Tabs from './Tabs';
+import Viewport from './Viewport';
 
+// Style files
+import '../styles/Tab.css';
+import '../styles/Tabs.css';
+import '../styles/Viewport.css';
 
-
-const App=()=>{
-    return(
+const App = () => {
+    return (
         <div>
-            <TabComponent/>
+            <Tabs />
+            <Viewport />
         </div>
-    )
+    );
 }
 
 export default App;
