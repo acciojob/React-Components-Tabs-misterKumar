@@ -1,18 +1,17 @@
-import React from 'react';
-import Tabs from './Tabs';
-import { useState } from 'react';
+import React from "react";
+import Tabs from "./Tabs";
 
-function App() {
-  const [tabNames , setTabNames] = useState(["Home", "About","Features"])
-  return (
-    <div className='app'>
-         <div >
-          <Tabs tabNames={tabNames} />
-          <div className='viewport'> Pages Go Here</div>
-         </div>
-
-    </div>
-  )
+const App=()=>{
+    return(
+        <div>
+            <div className="viewport">Pages Go Here</div>
+            <div className="tabs">
+                <div className="tab" id="Home-Tab">Home</div>
+                <div className="tab" id="About-Tab">About</div>
+                <div className="tab" id="Features-Tab">Features</div>
+            </div>
+        </div>
+    )
 }
 
 export default App
