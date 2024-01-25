@@ -21,8 +21,9 @@ const App = () => {
         Features
       </div>
 
+
       <div className="viewport">
-        <p>Pages Go Here - {activeTab}</p>
+        <p>Pages Go Here</p>
       </div>
     </div>
   );
