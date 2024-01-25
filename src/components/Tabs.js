@@ -18,9 +18,9 @@ function Tabs() {
       <div className="tab" id="Features-Tab" onClick={() => handleTabClick("Features")}>
         Features
       </div>
-      <div className="viewport">
+      {/* <div className="viewport">
         Pages Go Here
-      </div>
+      </div> */}
     </div>
   );
 }
